@@ -4,6 +4,7 @@ import HelloSpringMvc.bo.UserDetail;
 import HelloSpringMvc.enums.CheckRegisterEnum;
 import HelloSpringMvc.model.classfile.TimeDisplay;
 import HelloSpringMvc.service.CheckParam;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +17,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping(value = "")
 public class TimerController {
+
+    private static Logger logger = Logger.getLogger(TimerController.class);
+
     //访问地址：http://localhost:8080/Test/Timer/returnSuccess
     @RequestMapping(value = "testTimeNow",method=RequestMethod.POST)    //实际访问的url地址
     @ResponseBody
@@ -26,7 +30,7 @@ public class TimerController {
 //        return timeDisplay.toClock();
     }
 
-    @RequestMapping(value="login.html")
+    @RequestMapping(value="login")
     public ModelAndView login(String userName,String password){
         CheckParam checkParam = new CheckParam();
         ModelAndView mav = new ModelAndView();
@@ -34,6 +38,7 @@ public class TimerController {
         mav.addObject("userName",userName);
         mav.addObject("password",password);
         mav.addObject("loginResult",checkParam.checkLoginParam(userName,password).getErrorMsg());
+        logger.info(userName+"登陆成功");
         return mav;
     }
 
