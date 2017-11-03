@@ -33,6 +33,8 @@
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.10" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.3.9.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aspects:4.3.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.3.0" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.3" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.38" />
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
         </element>

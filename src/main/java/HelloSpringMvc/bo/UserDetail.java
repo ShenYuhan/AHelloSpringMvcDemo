@@ -1,23 +1,26 @@
 package HelloSpringMvc.bo;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by yuhan.shen on 2017/10/29.
  */
 public class UserDetail {
 
-    public String userName;
+    private String userName;
 
-    public String password;
+    private String password;
 
-    public Integer sex;
+    private Integer sex;
 
-    public Integer age;
+    private Integer age;
 
-    public String tel;
+    private String tel;
 
-    public String email;
+    private String email;
 
-    public String spouse;
+    private String spouse;
 
     public String getUserName() {
         return userName;

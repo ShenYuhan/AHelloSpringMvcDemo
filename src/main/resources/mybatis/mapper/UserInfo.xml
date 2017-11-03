@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="UserInfoMapper">
+    <resultMap id="UserInfoMap" type="HelloSpringMvc.model.UserInfo">
+        <result column="id" property="id" jdbcType="BIGINT" />
+        <result column="user_name" property="userName" jdbcType="VARCHAR" />
+        <result column="id" property="id" jdbcType="VARCHAR" />
+    </resultMap>
+
+
+    <select id="selectUserByID" resultMap="UserInfoMap">
+        select * from tbl_user_info where id = '1'
+    </select>
+</mapper>

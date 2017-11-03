@@ -87,7 +87,4 @@ public class mockitotest {
         System.out.println("对啊");
         assertEquals(3,3);
     }
-
-
-
 }

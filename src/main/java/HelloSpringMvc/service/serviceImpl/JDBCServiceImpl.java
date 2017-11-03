@@ -1,6 +1,10 @@
 package HelloSpringMvc.service.serviceImpl;
 
+import HelloSpringMvc.model.DatabaseLoginInfo;
 import HelloSpringMvc.service.JDBCService;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.context.TestExecutionListeners;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -14,12 +18,16 @@ public class JDBCServiceImpl implements JDBCService{
 
     //适用于select操作
     public ResultSet executeQuery(String sql){
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        DatabaseLoginInfo databaseLoginInfo = (DatabaseLoginInfo) context.getBean("dbLoginInfo");
         Connection connection = null;
         Statement statement = null;
         ResultSet resultSet = null;
+
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ahellospringmvcdemodb","root","123");
+            connection = DriverManager.getConnection(databaseLoginInfo.getUrl(),databaseLoginInfo.getUserName(),databaseLoginInfo.getPassword());
+//            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ahellospringmvcdemodb","root","123");
             statement = connection.createStatement();
             resultSet = statement.executeQuery(sql);
         } catch (ClassNotFoundException e) {
@@ -32,12 +40,15 @@ public class JDBCServiceImpl implements JDBCService{
 
     //适用于insert、update、delete等操作
     public int executeUpdate(String sql){
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        DatabaseLoginInfo databaseLoginInfo = (DatabaseLoginInfo) context.getBean("dbLoginInfo");
         Connection connection = null;
         Statement statement = null;
         int result = -1;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ahellospringmvcdemodb","root","123");
+            connection = DriverManager.getConnection(databaseLoginInfo.getUrl(),databaseLoginInfo.getUserName(),databaseLoginInfo.getPassword());
+//            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ahellospringmvcdemodb","root","123");
             statement = connection.createStatement();
             result = statement.executeUpdate(sql);
             return result;
@@ -68,5 +79,4 @@ public class JDBCServiceImpl implements JDBCService{
         }
         return maps;
     }
-
 }

@@ -11,4 +11,13 @@
         <property name="userName" value="syh"></property>
     </bean>
 
+    <bean id="dbLoginInfo" class="HelloSpringMvc.model.DatabaseLoginInfo">
+        <property name="type" value="jdbc:mysql://"></property>
+        <property name="address" value="localhost"></property>
+        <property name="port" value="3306"></property>
+        <property name="database" value="ahellospringmvcdemodb"></property>
+        <property name="userName" value="root"></property>
+        <property name="password" value="123"></property>
+    </bean>
+
 </beans>
