@@ -42,7 +42,7 @@ public class UserAccountController {
         ModelAndView mav = new ModelAndView();
         mav.setViewName("/html/basic/homepage");
         CheckParam checkParam = new CheckParam();
-        CheckRegisterEnum checkRegisterEnum = checkParam.checkRegisterDetailParamOld(new UserDetailInfoModel());
+        CheckRegisterEnum checkRegisterEnum = checkParam.registerUserDetailInfo(userDetail);
         mav.addObject("result",checkRegisterEnum.getErrorMsg());
         return mav;
     }

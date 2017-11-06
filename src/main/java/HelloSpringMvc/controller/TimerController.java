@@ -42,7 +42,7 @@ public class TimerController {
 //        return mav;
 //    }
 
-    @RequestMapping(value="register.html")
+    @RequestMapping(value="registerOld.html")
     public ModelAndView register(String userName,String password){
         CheckParam checkParam = new CheckParam();
         ModelAndView mav = new ModelAndView();
@@ -53,7 +53,7 @@ public class TimerController {
         return mav;
     }
 
-    @RequestMapping(value="registerDetail")
+    @RequestMapping(value="registerDetailOld")
     public ModelAndView registerDetail(){
         ModelAndView mav = new ModelAndView("/html/basic/registerDetail");
         return mav;

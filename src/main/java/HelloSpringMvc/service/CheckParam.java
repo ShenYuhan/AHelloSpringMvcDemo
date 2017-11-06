@@ -57,6 +57,10 @@ public class CheckParam {
     public CheckRegisterEnum registerUserDetailInfo(UserDetailInfoBo userDetailInfoBo){
         UserDetailInfoModel userDetailInfoModel = new UserDetailInfoModel();
         Long id = getUserInfoId(userDetailInfoBo.getUserName());
+        if (id.intValue()<0){
+            registerUserInfo(userDetailInfoBo.getUserName(),userDetailInfoBo.getPassword());
+        }
+        id = getUserInfoId(userDetailInfoBo.getUserName());
         if (id.intValue()>0){
             if (userAccountDao.isExistUserDetailInfoByUserName(userDetailInfoBo.getUserName())
                     ||!(userAccountDao.selectUserInfoByUserName(userDetailInfoBo.getUserName()).getPassword().equals(userDetailInfoBo.getPassword()))){
