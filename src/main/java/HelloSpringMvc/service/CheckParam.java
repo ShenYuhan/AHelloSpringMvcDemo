@@ -1,13 +1,14 @@
 package HelloSpringMvc.service;
 
 
-import HelloSpringMvc.bo.UserDetail;
+import HelloSpringMvc.bo.UserDetailInfoBo;
+import HelloSpringMvc.dao.UserAccountDao;
 import HelloSpringMvc.enums.CheckLoginEnum;
 import HelloSpringMvc.enums.CheckRegisterEnum;
+import HelloSpringMvc.model.UserDetailInfoModel;
+import HelloSpringMvc.model.UserInfo;
 import HelloSpringMvc.service.serviceImpl.GenerateSqlImpl;
 import HelloSpringMvc.service.serviceImpl.JDBCServiceImpl;
-
-import javax.annotation.Resource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.*;
@@ -16,7 +17,89 @@ import java.util.*;
  * Created by yuhan.shen on 2017/10/27.
  */
 public class CheckParam {
+
+    UserAccountDao userAccountDao = new UserAccountDao();
+
     public CheckLoginEnum checkLoginParam(String userName, String password){
+        UserInfo userInfo = userAccountDao.selectUserInfoByUserName(userName);
+        if (userInfo==null){
+            return CheckLoginEnum.FAIL_USER_NAME;
+        }
+        else{
+            if (userInfo.getPassword().equals(password)){
+                return CheckLoginEnum.SUCCESS;
+            }
+            else{
+                return CheckLoginEnum.FAIL_PASSWORD;
+            }
+        }
+    }
+
+    public CheckRegisterEnum registerUserInfo(String userName,String password){
+        if (userAccountDao.isExistUserInfoByUserName(userName)){
+            return CheckRegisterEnum.DUPLICATE_USERNAME;
+        }
+        else{
+            userAccountDao.insertUserInfo(userName,password);
+            return CheckRegisterEnum.REGISTER_SUCCESS;
+        }
+    }
+
+    public Long getUserInfoId(String userName){
+        if (userAccountDao.isExistUserInfoByUserName(userName)){
+            return userAccountDao.selectUserInfoByUserName(userName).getId();
+        }
+        else{
+            return Long.valueOf(-1);
+        }
+    }
+
+    public CheckRegisterEnum registerUserDetailInfo(UserDetailInfoBo userDetailInfoBo){
+        UserDetailInfoModel userDetailInfoModel = new UserDetailInfoModel();
+        Long id = getUserInfoId(userDetailInfoBo.getUserName());
+        if (id.intValue()>0){
+            if (userAccountDao.isExistUserDetailInfoByUserName(userDetailInfoBo.getUserName())
+                    ||!(userAccountDao.selectUserInfoByUserName(userDetailInfoBo.getUserName()).getPassword().equals(userDetailInfoBo.getPassword()))){
+                return CheckRegisterEnum.DUPLICATE_USERNAME;
+            }
+            userDetailInfoModel.setId(id);
+            userDetailInfoModel.setUserName(userDetailInfoBo.getUserName());
+            userDetailInfoModel.setSex(userDetailInfoBo.getSex());
+            userDetailInfoModel.setAge(userDetailInfoBo.getAge());
+            userDetailInfoModel.setEmail(userDetailInfoBo.getEmail());
+            userDetailInfoModel.setTel(userDetailInfoBo.getTel());
+            userDetailInfoModel.setSpouse(userDetailInfoBo.getSpouse());
+            if (userAccountDao.insertUserDetailInfo(userDetailInfoModel)){
+                return CheckRegisterEnum.REGISTER_SUCCESS;
+            }
+            else {
+                return CheckRegisterEnum.FAIL_SYS;
+            }
+        }
+        else{
+            return CheckRegisterEnum.FAIL_SYS;
+        }
+    }
+
+    public static void main(String[] args) {
+        CheckParam checkParam = new CheckParam();
+        System.out.println(checkParam.checkLoginParam("test007","007"));
+        System.out.println(checkParam.registerUserInfo("test007","007"));
+        UserDetailInfoBo userDetailInfoBo = new UserDetailInfoBo();
+        userDetailInfoBo.setUserName("test007");
+        userDetailInfoBo.setSex(2);
+        userDetailInfoBo.setAge(1);
+        userDetailInfoBo.setEmail("1@163.com");
+        userDetailInfoBo.setPassword("007");
+        userDetailInfoBo.setTel("13000000000");
+        userDetailInfoBo.setSpouse("lqq");
+        System.out.println(checkParam.registerUserDetailInfo(userDetailInfoBo));
+        System.out.println(checkParam.checkLoginParam("test007","007"));
+    }
+
+
+
+    public CheckLoginEnum checkLoginParamOld(String userName, String password){
         GenerateSql generateSql = new GenerateSqlImpl();
         Set<String> sets = new LinkedHashSet<String>();
         sets.add("*");
@@ -44,7 +127,7 @@ public class CheckParam {
         return CheckLoginEnum.FAIL_SYS;
     }
 
-    public CheckRegisterEnum checkRegisterParam(String userName,String password){
+    public CheckRegisterEnum checkRegisterParamOld(String userName,String password){
         GenerateSql generateSql = new GenerateSqlImpl();
         Set<String> sets = new LinkedHashSet<String>();
         sets.add("*");
@@ -72,7 +155,9 @@ public class CheckParam {
         return CheckRegisterEnum.FAIL_SYS;
     }
 
-    public CheckRegisterEnum checkRegisterDetailParam(UserDetail userDetail){
+
+
+    public CheckRegisterEnum checkRegisterDetailParamOld(UserDetailInfoModel userDetail){
         GenerateSql generateSql = new GenerateSqlImpl();
         Set<String> sets = new LinkedHashSet<String>();
         sets.add("id");

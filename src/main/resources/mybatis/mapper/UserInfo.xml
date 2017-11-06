@@ -6,11 +6,23 @@
     <resultMap id="UserInfoMap" type="HelloSpringMvc.model.UserInfo">
         <result column="id" property="id" jdbcType="BIGINT" />
         <result column="user_name" property="userName" jdbcType="VARCHAR" />
-        <result column="id" property="id" jdbcType="VARCHAR" />
+        <result column="password" property="password" jdbcType="VARCHAR" />
     </resultMap>
 
 
-    <select id="selectUserByID" resultMap="UserInfoMap">
-        select * from tbl_user_info where id = '1'
+    <select id="selectUserInfoById" parameterType="java.lang.Long" resultMap="UserInfoMap">
+        select * from tbl_user_info where id = #{id}
     </select>
+
+    <select id="selectUserInfoByUserName" parameterType="java.lang.String" resultMap="UserInfoMap">
+        select * from tbl_user_info where user_name = #{userName}
+    </select>
+
+    <select id="selectUserInfoCountByUserName" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select count(*) from tbl_user_info where user_name = #{userName}
+    </select>
+
+    <insert id="insertUserInfo" parameterType="java.util.Map">
+        insert into tbl_user_info (user_name,password) values (#{userName},#{password})
+    </insert>
 </mapper>

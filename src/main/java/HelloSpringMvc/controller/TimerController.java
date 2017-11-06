@@ -1,8 +1,8 @@
 package HelloSpringMvc.controller;
 
-import HelloSpringMvc.bo.UserDetail;
+import HelloSpringMvc.bo.UserDetailInfoBo;
 import HelloSpringMvc.enums.CheckRegisterEnum;
-import HelloSpringMvc.model.classfile.TimeDisplay;
+import HelloSpringMvc.model.UserDetailInfoModel;
 import HelloSpringMvc.service.CheckParam;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -30,17 +30,17 @@ public class TimerController {
 //        return timeDisplay.toClock();
     }
 
-    @RequestMapping(value="login")
-    public ModelAndView login(String userName,String password){
-        CheckParam checkParam = new CheckParam();
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("/html/basic/loginSuccess");
-        mav.addObject("userName",userName);
-        mav.addObject("password",password);
-        mav.addObject("loginResult",checkParam.checkLoginParam(userName,password).getErrorMsg());
-        logger.info(userName+"登陆成功");
-        return mav;
-    }
+//    @RequestMapping(value="login")
+//    public ModelAndView login(String userName,String password){
+//        CheckParam checkParam = new CheckParam();
+//        ModelAndView mav = new ModelAndView();
+//        mav.setViewName("/html/basic/loginSuccess");
+//        mav.addObject("userName",userName);
+//        mav.addObject("password",password);
+//        mav.addObject("loginResult",checkParam.checkLoginParam(userName,password).getErrorMsg());
+//        logger.info(userName+"登陆成功");
+//        return mav;
+//    }
 
     @RequestMapping(value="register.html")
     public ModelAndView register(String userName,String password){
@@ -49,7 +49,7 @@ public class TimerController {
         mav.setViewName("/html/basic/registerSuccess");
         mav.addObject("userName",userName);
         mav.addObject("password",password);
-        mav.addObject("registerResult",checkParam.checkRegisterParam(userName,password).getErrorMsg());
+        mav.addObject("registerResult",checkParam.checkRegisterParamOld(userName,password).getErrorMsg());
         return mav;
     }
 
@@ -59,21 +59,21 @@ public class TimerController {
         return mav;
     }
 
-    @RequestMapping(value="submitRegisterDetail")
-    public ModelAndView submitRegisterDetail(UserDetail userDetail){
-        ModelAndView mav = new ModelAndView();
-        mav.setViewName("/html/basic/homepage");
-        CheckParam checkParam = new CheckParam();
-        CheckRegisterEnum checkRegisterEnum = checkParam.checkRegisterDetailParam(userDetail);
-        mav.addObject("result",checkRegisterEnum.getErrorMsg());
-//
-//        String str = "不是本人";
-//        if (userDetail.getUserName().equals("yuhan.shen")){
-//            str = "欢迎您！";
-//        }
-//        mav.addObject("result",str);
-        return mav;
-    }
+//    @RequestMapping(value="submitRegisterDetail")
+//    public ModelAndView submitRegisterDetail(UserDetailInfoBo userDetail){
+//        ModelAndView mav = new ModelAndView();
+//        mav.setViewName("/html/basic/homepage");
+//        CheckParam checkParam = new CheckParam();
+//        CheckRegisterEnum checkRegisterEnum = checkParam.checkRegisterDetailParamOld(new UserDetailInfoModel());
+//        mav.addObject("result",checkRegisterEnum.getErrorMsg());
+////
+////        String str = "不是本人";
+////        if (userDetail.getUserName().equals("yuhan.shen")){
+////            str = "欢迎您！";
+////        }
+////        mav.addObject("result",str);
+//        return mav;
+//    }
 
 //    @RequestMapping(value="sumitRegisterDetail")
 //    public ModelAndView tttt(){

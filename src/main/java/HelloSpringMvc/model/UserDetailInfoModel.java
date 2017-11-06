@@ -1,16 +1,13 @@
-package HelloSpringMvc.bo;
-
-import java.util.HashMap;
-import java.util.Map;
+package HelloSpringMvc.model;
 
 /**
- * Created by yuhan.shen on 2017/10/29.
+ * Created by yuhan.shen on 2017/11/6.
  */
-public class UserDetail {
+public class UserDetailInfoModel {
+
+    private Long id;
 
     private String userName;
-
-    private String password;
 
     private Integer sex;
 
@@ -22,20 +19,20 @@ public class UserDetail {
 
     private String spouse;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getUserName() {
         return userName;
     }
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public Integer getSex() {
@@ -80,9 +77,9 @@ public class UserDetail {
 
     @Override
     public String toString() {
-        return "UserDetail{" +
-                "userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
+        return "UserDetailInfo{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
                 ", sex=" + sex +
                 ", age=" + age +
                 ", tel='" + tel + '\'' +

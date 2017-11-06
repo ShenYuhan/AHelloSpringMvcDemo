@@ -7,24 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fe5e2dc-382b-4400-8429-f86587c5f0a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/DatabaseLoginInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/UserInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/GenerateSql.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/serviceImpl/GenerateSqlImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserInfo.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/TestUserInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/AHelloSpringMvcDemo_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/AHelloSpringMvcDemo_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/UserAccountController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/dao/BaseDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/dao/UserAccountDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/UserDetailInfoModel.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/bo/UserDetail.java" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/bo/UserDetailInfoBo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/properties/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserDetailInfo.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AHelloSpringMvcDemo.iml" afterPath="$PROJECT_DIR$/AHelloSpringMvcDemo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/bo/UserDetail.java" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/bo/UserDetail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/TimerController.java" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/TimerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/UserInfo.java" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/UserInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/CheckParam.java" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/CheckParam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/JDBCService.java" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/JDBCService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/serviceImpl/JDBCServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/serviceImpl/JDBCServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserInfo.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserInfo.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/mockitotest.java" afterPath="$PROJECT_DIR$/src/test/mockitotest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,114 +31,118 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <file leaf-file-name="CheckParam.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/CheckParam.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="88" column="48" lean-forward="true" selection-start-line="88" selection-start-column="48" selection-end-line="88" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#checkLoginParam#0;class#CheckParam#0" expanded="false" />
+                <element signature="method#registerUserInfo#0;class#CheckParam#0" expanded="false" />
+                <element signature="method#getUserInfoId#0;class#CheckParam#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserAccountDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/dao/UserAccountDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#304#305#0" expanded="true" />
+                <element signature="e#387#388#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDetailInfoModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/UserDetailInfoModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDetailInfo.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserDetailInfo.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="55" lean-forward="true" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+              <folding>
+                <marker date="1509961234526" expanded="true" signature="883:1030" ph="insert into tbl_user_detail_info... " />
+                <marker date="1509961234526" expanded="true" signature="1172:1249" ph="select count... tbl_user_detail_info" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimerController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/TimerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="51" column="106" lean-forward="true" selection-start-line="51" selection-start-column="106" selection-end-line="51" selection-end-column="106" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserAccountController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/UserAccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homepage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/html/basic/homepage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="10" column="62" lean-forward="true" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
+              <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="JDBCServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/serviceImpl/JDBCServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="172" column="71" lean-forward="true" selection-start-line="172" selection-start-column="71" selection-end-line="172" selection-end-column="71" />
+            <state relative-caret-position="239">
+              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jdbctest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/jdbctest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-              <folding>
-                <marker date="1509193704011" expanded="true" signature="573:620" ph="select id,us... tbl_user_info" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserInfo.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserInfo.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="9" />
-              <folding>
-                <marker date="1509700596329" expanded="true" signature="551:593" ph="select * fro... tbl_user_info" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Log4jTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/Log4jTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mybatis-config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="19" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/UserInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenerateSql.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/GenerateSql.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenerateSqlImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/serviceImpl/GenerateSqlImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestUserInfo.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/TestUserInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -172,6 +170,7 @@
       <find>spring</find>
       <find>prope</find>
       <find>my</find>
+      <find>dbLoginInfo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,13 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/LoggingAspect.java" />
-        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/Timer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/classfile/TimeRoot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/classfile/TimeDisplay.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/html/basic/homePage.html" />
-        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/BasicController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/cc/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/html/basic/tt.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/html/basic/tt.jsp" />
@@ -225,7 +217,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/properties/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/test/Log4jTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/TimerController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/test/mockitotest.java" />
         <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/GenerateSql.java" />
@@ -234,13 +225,21 @@
         <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/JDBCService.java" />
         <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/serviceImpl/JDBCServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/bo/UserDetail.java" />
-        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/CheckParam.java" />
-        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/UserInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserInfo.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/serviceImpl/GenerateSqlImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/TestUserInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/UserDetailInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserInfo.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/dao/BaseDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/bo/UserDetailInfoBo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/UserInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/UserDetailInfoModel.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserDetailInfo.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/dao/UserAccountDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/CheckParam.java" />
+        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/TimerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/UserAccountController.java" />
       </list>
     </option>
   </component>
@@ -301,11 +300,11 @@
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_HOME" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1989" />
-    <option name="y" value="43" />
-    <option name="width" value="1936" />
-    <option name="height" value="1100" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1675" />
+    <option name="y" value="77" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -323,9 +322,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -358,6 +358,33 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="HelloSpringMvc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AHelloSpringMvcDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AHelloSpringMvcDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="HelloSpringMvc" type="462c0819:PsiDirectoryNode" />
+              <item name="bo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AHelloSpringMvcDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AHelloSpringMvcDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="HelloSpringMvc" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AHelloSpringMvcDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AHelloSpringMvcDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="HelloSpringMvc" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AHelloSpringMvcDemo" type="b2602c69:ProjectViewProjectNode" />
@@ -424,7 +451,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -459,7 +485,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestUserInfo.selectTest">
+  <component name="RunManager" selected="Application.CheckParam">
     <configuration name="CheckParam" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -506,20 +532,6 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="HelloSpringMvc.service.serviceImpl.JDBCServiceImpl" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="AHelloSpringMvcDemo" />
-      <envs />
-    </configuration>
-    <configuration name="Log4jTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Log4jTest" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -623,6 +635,25 @@
           <artifact name="AHelloSpringMvcDemo:war exploded" />
         </option>
       </method>
+    </configuration>
+    <configuration name="UserAccountDao" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="HelloSpringMvc.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="HelloSpringMvc.dao.UserAccountDao" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="AHelloSpringMvcDemo" />
+      <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
@@ -818,19 +849,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Log4jTest" />
-      <item index="2" class="java.lang.String" itemvalue="Application.GenerateSqlImpl" />
-      <item index="3" class="java.lang.String" itemvalue="Application.JDBCServiceImpl" />
-      <item index="4" class="java.lang.String" itemvalue="Application.CheckParam" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.TestUserInfo.selectTest" />
+      <item index="1" class="java.lang.String" itemvalue="Application.GenerateSqlImpl" />
+      <item index="2" class="java.lang.String" itemvalue="Application.JDBCServiceImpl" />
+      <item index="3" class="java.lang.String" itemvalue="Application.CheckParam" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestUserInfo.selectTest" />
+      <item index="5" class="java.lang.String" itemvalue="Application.UserAccountDao" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestUserInfo.selectTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.CheckParam" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GenerateSqlImpl" />
-        <item index="3" class="java.lang.String" itemvalue="Application.JDBCServiceImpl" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Log4jTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.CheckParam" />
+        <item index="1" class="java.lang.String" itemvalue="Application.UserAccountDao" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestUserInfo.selectTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GenerateSqlImpl" />
+        <item index="4" class="java.lang.String" itemvalue="Application.JDBCServiceImpl" />
       </list>
     </recent_temporary>
   </component>
@@ -852,7 +883,8 @@
       <workItem from="1509240265189" duration="18241000" />
       <workItem from="1509332309952" duration="16704000" />
       <workItem from="1509595538904" duration="9787000" />
-      <workItem from="1509678542667" duration="21934000" />
+      <workItem from="1509678542667" duration="22306000" />
+      <workItem from="1509939339824" duration="17299000" />
     </task>
     <servers />
   </component>
@@ -889,10 +921,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146682000" />
+    <option name="totallyTimeSpent" value="164353000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1989" y="43" width="1936" height="1100" extended-state="0" />
+    <frame x="-1928" y="-135" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -913,12 +945,12 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.55" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39529914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16364606" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1652452" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3653846" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3653846" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -944,43 +976,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/classfile/TimeDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="97" column="32" lean-forward="true" selection-start-line="96" selection-start-column="31" selection-end-line="97" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/basic/tt.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/enums/CheckLoginEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/enums/CheckRegisterEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/testHtml/helloSpringmvc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/BasicController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -1001,13 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/basic/homepage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1114,13 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/test2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1148,7 +1129,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2700">
           <caret line="123" column="17" lean-forward="false" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,47 +1152,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/DatabaseLoginInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
           <caret line="88" column="50" lean-forward="true" selection-start-line="88" selection-start-column="50" selection-end-line="88" selection-end-column="50" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#606#607#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#956#957#0" expanded="true" />
-            <element signature="e#1004#1005#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
-            <element signature="e#1079#1080#0" expanded="true" />
-            <element signature="e#1110#1111#0" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
-            <element signature="e#1198#1199#0" expanded="true" />
-            <element signature="e#1592#1607#0" expanded="true" />
-            <element signature="e#1850#1851#0" expanded="true" />
-            <element signature="e#1907#1908#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#359#360#0" expanded="false" />
+            <element signature="e#386#387#0" expanded="false" />
+            <element signature="e#426#427#0" expanded="false" />
+            <element signature="e#458#459#0" expanded="false" />
+            <element signature="e#492#493#0" expanded="false" />
+            <element signature="e#522#523#0" expanded="false" />
+            <element signature="e#568#569#0" expanded="false" />
+            <element signature="e#606#607#0" expanded="false" />
+            <element signature="e#637#638#0" expanded="false" />
+            <element signature="e#664#665#0" expanded="false" />
+            <element signature="e#704#705#0" expanded="false" />
+            <element signature="e#736#737#0" expanded="false" />
+            <element signature="e#771#772#0" expanded="false" />
+            <element signature="e#802#803#0" expanded="false" />
+            <element signature="e#850#851#0" expanded="false" />
+            <element signature="e#890#891#0" expanded="false" />
+            <element signature="e#925#926#0" expanded="false" />
+            <element signature="e#956#957#0" expanded="false" />
+            <element signature="e#1004#1005#0" expanded="false" />
+            <element signature="e#1044#1045#0" expanded="false" />
+            <element signature="e#1079#1080#0" expanded="false" />
+            <element signature="e#1110#1111#0" expanded="false" />
+            <element signature="e#1158#1159#0" expanded="false" />
+            <element signature="e#1198#1199#0" expanded="false" />
+            <element signature="e#1592#1607#0" expanded="false" />
+            <element signature="e#1850#1851#0" expanded="false" />
+            <element signature="e#1907#1908#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1222,68 +1194,8 @@
         <state relative-caret-position="375">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/serviceImpl/JDBCServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="33" />
-          <folding>
-            <element signature="method#resultSetToMap#0;class#JDBCServiceImpl#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/bo/UserDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="91" column="5" lean-forward="false" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
-          <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/TimerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/CheckParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="125" column="63" lean-forward="true" selection-start-line="125" selection-start-column="63" selection-end-line="125" selection-end-column="63" />
-          <folding>
-            <element signature="e#645#653#0" expanded="false" />
-            <element signature="e#732#748#0" expanded="false" />
-            <element signature="e#1701#1709#0" expanded="false" />
-            <element signature="e#1788#1804#0" expanded="false" />
-            <element signature="e#2828#2836#0" expanded="false" />
-            <element signature="e#2916#2932#0" expanded="false" />
-            <element signature="e#4242#4258#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.2.3/mybatis-3.2.3.jar!/org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1291,6 +1203,106 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="80" column="10" lean-forward="false" selection-start-line="80" selection-start-column="10" selection-end-line="80" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Log4jTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/GenerateSql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/serviceImpl/GenerateSqlImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1600">
+          <caret line="66" column="29" lean-forward="false" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="172" column="71" lean-forward="false" selection-start-line="172" selection-start-column="71" selection-end-line="172" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/TestUserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/jdbctest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <marker date="1509193704011" expanded="true" signature="573:620" ph="select id,us... tbl_user_info" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="56" column="59" lean-forward="true" selection-start-line="56" selection-start-column="59" selection-end-line="56" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/properties/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="56" lean-forward="true" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.2.3/mybatis-3.2.3.jar!/org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1303,84 +1315,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Log4jTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/GenerateSql.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/serviceImpl/GenerateSqlImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="66" column="29" lean-forward="true" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/jdbctest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <marker date="1509193704011" expanded="true" signature="573:620" ph="select id,us... tbl_user_info" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="172" column="71" lean-forward="true" selection-start-line="172" selection-start-column="71" selection-end-line="172" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/UserInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="350">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding>
+            <element signature="e#209#210#0" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserInfo.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="9" />
+        <state relative-caret-position="500">
+          <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding>
-            <marker date="1509700596329" expanded="true" signature="551:593" ph="select * fro... tbl_user_info" />
+            <marker date="1509956761366" expanded="true" signature="598:637" ph="select * fro... tbl_user_info" />
+            <marker date="1509956761366" expanded="true" signature="598:642" ph="select * fro... tbl_user_info" />
+            <marker date="1509956761366" expanded="true" signature="766:823" ph="select * fro... tbl_user_info" />
+            <marker date="1509956761366" expanded="true" signature="959:1023" ph="select count... tbl_user_info" />
+            <marker date="1509956761366" expanded="true" signature="1110:1189" ph="insert into tbl_user_info... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/bo/UserDetailInfoBo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="19" selection-end-column="14" />
+        <state relative-caret-position="275">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/TestUserInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/UserDetailInfoModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/dao/UserAccountDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="32" column="24" lean-forward="true" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserDetailInfo.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="55" lean-forward="true" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding>
+            <marker date="1509961234526" expanded="true" signature="883:1030" ph="insert into tbl_user_detail_info... " />
+            <marker date="1509961234526" expanded="true" signature="1172:1249" ph="select count... tbl_user_detail_info" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/CheckParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="88" column="48" lean-forward="true" selection-start-line="88" selection-start-column="48" selection-end-line="88" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#checkLoginParam#0;class#CheckParam#0" expanded="false" />
+            <element signature="method#registerUserInfo#0;class#CheckParam#0" expanded="false" />
+            <element signature="method#getUserInfoId#0;class#CheckParam#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/UserAccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/basic/homepage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/service/serviceImpl/JDBCServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSpringMvc/controller/TimerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="51" column="106" lean-forward="true" selection-start-line="51" selection-start-column="106" selection-end-line="51" selection-end-column="106" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
