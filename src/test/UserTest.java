@@ -14,6 +14,7 @@ public class UserTest {
         System.out.println(user.getUserId());
         System.out.println(user.getAge());
 
+
         System.out.println(user2.getUserName());
         System.out.println(user2.getUserId());
         System.out.println(user2.getAge());
