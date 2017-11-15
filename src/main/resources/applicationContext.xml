@@ -10,6 +10,10 @@
         <property name="userId" value="4369"></property>
         <property name="userName" value="syh"></property>
     </bean>
+    <bean id="RunnerInfo" class="HelloSpringMvc.model.RunnerInfo">
+        <property name="name" value="张三"></property>
+        <property name="age" value="25"></property>
+    </bean>
 
     <bean id="dbLoginInfo" class="HelloSpringMvc.model.DatabaseLoginInfo">
         <property name="type" value="jdbc:mysql://"></property>

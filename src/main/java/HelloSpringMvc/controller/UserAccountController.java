@@ -1,6 +1,7 @@
 package HelloSpringMvc.controller;
 
 import HelloSpringMvc.bo.UserDetailInfoBo;
+import HelloSpringMvc.bo.UserInfoBo;
 import HelloSpringMvc.enums.CheckRegisterEnum;
 import HelloSpringMvc.model.UserDetailInfoModel;
 import HelloSpringMvc.service.CheckParam;
@@ -20,14 +21,14 @@ public class UserAccountController {
     private static Logger logger = Logger.getLogger(TimerController.class);
 
     @RequestMapping(value="login")
-    public ModelAndView login(String userName, String password){
+    public ModelAndView login(UserInfoBo userInfoBo){
         CheckParam checkParam = new CheckParam();
         ModelAndView mav = new ModelAndView();
         mav.setViewName("/html/basic/loginSuccess");
-        mav.addObject("userName",userName);
-        mav.addObject("password",password);
-        mav.addObject("loginResult",checkParam.checkLoginParam(userName,password).getErrorMsg());
-        logger.info(userName+"登陆成功");
+        mav.addObject("userName",userInfoBo.getUserName());
+        mav.addObject("password",userInfoBo.getPassword());
+        mav.addObject("loginResult",checkParam.checkLoginParam(userInfoBo.getUserName(),userInfoBo.getPassword()).getErrorMsg());
+        logger.info(userInfoBo.getUserName()+"登陆成功");
         return mav;
     }
 
