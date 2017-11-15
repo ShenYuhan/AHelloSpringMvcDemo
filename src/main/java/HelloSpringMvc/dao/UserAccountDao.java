@@ -7,10 +7,14 @@ import java.util.Map;
 /**
  * Created by yuhan.shen on 2017/11/6.
  */
-public class UserAccountDao extends BaseDao{
+public class UserAccountDao extends BaseDao implements UserAccountDaoFather{
 
     public UserInfo selectUserInfoById(Long id){
         return (UserInfo) selectOne("UserInfoMapper.selectUserInfoById",id);
+    }
+
+    public void printTest(){
+        System.out.println("testPrint");
     }
 
     public UserInfo selectUserInfoByUserName(String userName){

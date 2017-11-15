@@ -9,10 +9,21 @@
 <html>
 <head>
     <title>Title</title>
+    <%! long i = 0;%>
+    <%! String webName = "大公鸡交友网站";%>
 </head>
 <body>
-账号：${userName}<br/>
-密码：${password}<br/>
-${loginResult}
+<div align="center">
+    <p>账号:${userName}</p>
+    <p>密码:${password}</p>
+    <p>${loginResult}</p>
+    <p>
+        <%
+            ++i;
+            out.println("欢迎光临"+webName);
+            out.println("您是第"+i+"位访问用户");
+        %>
+    </p>
+</div>
 </body>
 </html>

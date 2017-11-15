@@ -54,6 +54,9 @@ public class CheckParam {
         }
     }
 
+    /**
+     * @author 申玉涵
+     */
     public CheckRegisterEnum registerUserDetailInfo(UserDetailInfoBo userDetailInfoBo){
         UserDetailInfoModel userDetailInfoModel = new UserDetailInfoModel();
         Long id = getUserInfoId(userDetailInfoBo.getUserName());
@@ -102,7 +105,13 @@ public class CheckParam {
     }
 
 
-
+    /**
+     *
+     * @param userName 用户名
+     * @param password 密码
+     * @return CheckLoginEnum 登录状态
+     * @deprecated 不建议使用
+     */
     public CheckLoginEnum checkLoginParamOld(String userName, String password){
         GenerateSql generateSql = new GenerateSqlImpl();
         Set<String> sets = new LinkedHashSet<String>();
