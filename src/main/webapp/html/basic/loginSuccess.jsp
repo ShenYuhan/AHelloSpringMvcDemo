@@ -11,17 +11,25 @@
     <title>Title</title>
     <%! long i = 0;%>
     <%! String webName = "大公鸡交友网站";%>
+    <script language="JavaScript">
+        window.setTimeout(skip,3000);
+
+        function skip(){
+            window.location.href = "/html/basic/homepage.jsp";
+        }
+    </script>
 </head>
 <body>
 <div align="center">
     <p>账号:${userName}</p>
-    <p>密码:${password}</p>
     <p>${loginResult}</p>
     <p>
         <%
             ++i;
             out.println("欢迎光临"+webName);
             out.println("您是第"+i+"位访问用户");
+            out.println("<br/>");
+            out.println("3秒后跳转...");
         %>
     </p>
 </div>

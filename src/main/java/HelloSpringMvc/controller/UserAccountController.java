@@ -24,12 +24,24 @@ public class UserAccountController {
     public ModelAndView login(UserInfoBo userInfoBo){
         CheckParam checkParam = new CheckParam();
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("/html/basic/loginSuccess");
-        mav.addObject("userName",userInfoBo.getUserName());
-        mav.addObject("password",userInfoBo.getPassword());
-        mav.addObject("loginResult",checkParam.checkLoginParam(userInfoBo.getUserName(),userInfoBo.getPassword()).getErrorMsg());
-        logger.info(userInfoBo.getUserName()+"登陆成功");
-        return mav;
+        if (checkParam.checkLoginParam(userInfoBo.getUserName(),userInfoBo.getPassword()).getErrorCode()==0){
+            mav.setViewName("/html/basic/loginSuccess");
+            mav.addObject("userName",userInfoBo.getUserName());
+            mav.addObject("password",userInfoBo.getPassword());
+            logger.info(userInfoBo.getUserName()+"登陆成功");
+            mav.addObject("loginResult","登录成功");
+            return mav;
+        }
+        else{
+            mav.setViewName("/html/basic/loginFail");
+            mav.addObject("userName",userInfoBo.getUserName());
+            mav.addObject("password",userInfoBo.getPassword());
+            mav.addObject("loginResult",checkParam.checkLoginParam(userInfoBo.getUserName(),userInfoBo.getPassword()).getErrorMsg());
+            return mav;
+        }
+
+
+
     }
 
     @RequestMapping(value="registerDetail")

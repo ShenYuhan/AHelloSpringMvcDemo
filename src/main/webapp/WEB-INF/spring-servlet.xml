@@ -31,4 +31,5 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
 
     <mvc:resources mapping="/html/**" location="/html/" />
     <mvc:resources mapping="/html/basic/**" location="/html/basic/" />
+    <mvc:resources mapping="/html/image/**" location="/html/image/" />
 </beans>
