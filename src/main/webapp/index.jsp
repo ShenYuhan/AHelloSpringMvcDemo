@@ -34,6 +34,7 @@
                 <input id="submitButton"  type="submit" value="登录" onclick="return checkLogin()"/>
                 <input id="registerButton" type="submit" value="注册" onclick="javascript:this.form.action='registerDetail'"/>
             </td></tr>
+            <a href="/html/basic/easy.jsp" >easy</a>
             <%--<input id="registerButton2" type="button" value="注册2" onclick="javascript:window.location.href='http://www.baidu.com'"/>--%>
         </table>
 

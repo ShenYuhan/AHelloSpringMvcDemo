@@ -1,8 +1,5 @@
 package HelloSpringMvc.controller;
 
-import HelloSpringMvc.bo.UserDetailInfoBo;
-import HelloSpringMvc.enums.CheckRegisterEnum;
-import HelloSpringMvc.model.UserDetailInfoModel;
 import HelloSpringMvc.service.CheckParam;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -46,7 +43,7 @@ public class TimerController {
     public ModelAndView register(String userName,String password){
         CheckParam checkParam = new CheckParam();
         ModelAndView mav = new ModelAndView();
-        mav.setViewName("/html/basic/registerSuccess");
+        mav.setViewName("html/account/registerSuccess");
         mav.addObject("userName",userName);
         mav.addObject("password",password);
         mav.addObject("registerResult",checkParam.checkRegisterParamOld(userName,password).getErrorMsg());
@@ -55,7 +52,7 @@ public class TimerController {
 
     @RequestMapping(value="registerDetailOld")
     public ModelAndView registerDetail(){
-        ModelAndView mav = new ModelAndView("/html/basic/registerDetail");
+        ModelAndView mav = new ModelAndView("html/account/registerDetail");
         return mav;
     }
 

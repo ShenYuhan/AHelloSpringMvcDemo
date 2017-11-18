@@ -11,7 +11,7 @@
     <title>登录失败</title>
     <script language="JavaScript">
         function restartLogin(){
-            window.location.href="index.jsp";
+            window.location.href="../../index.jsp";
         }
     </script>
 </head>
