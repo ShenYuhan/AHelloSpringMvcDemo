@@ -25,4 +25,9 @@
     <insert id="insertUserInfo" parameterType="java.util.Map">
         insert into tbl_user_info (user_name,password) values (#{userName},#{password})
     </insert>
+
+    <update id="updatePassword" parameterType="java.util.Map">
+        update tbl_user_info set password = #{password}
+        where user_name = #{userName}
+    </update>
 </mapper>

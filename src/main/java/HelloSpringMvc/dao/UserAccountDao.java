@@ -62,6 +62,13 @@ public class UserAccountDao extends BaseDao implements UserAccountDaoFather{
         }
     }
 
+    public int updateUserPassword(String userName,String password){
+        Map<String,String> maps = new HashMap<String, String>();
+        maps.put("userName",userName);
+        maps.put("password",password);
+        return updateList("UserDetailInfoMapper.updatePassword",maps);
+    }
+
     public static void main(String[] args) {
         UserAccountDao userAccountDao = new UserAccountDao();
         UserDetailInfoModel userDetailInfo = new UserDetailInfoModel();

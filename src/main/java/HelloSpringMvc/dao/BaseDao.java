@@ -61,8 +61,15 @@ public class BaseDao {
 
     public int insert(String statement,Object param){
         SqlSession session = getSqlSessionFactory().openSession();
-        System.out.println(statement);
         int resultCount = session.insert(statement,param);
+        session.commit();
+        session.close();
+        return resultCount;
+    }
+
+    public int updateList(String statement,Object param){
+        SqlSession session = getSqlSessionFactory().openSession();
+        int resultCount = session.update(statement,param);
         session.commit();
         session.close();
         return resultCount;
