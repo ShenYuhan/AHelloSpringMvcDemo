@@ -12,5 +12,8 @@
 </head>
 <body>
 <p align="center">首页</p>
+<table align="center">
+    <tr><td><a href=""</td></tr>
+</table>
 </body>
 </html>

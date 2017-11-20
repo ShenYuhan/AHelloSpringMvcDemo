@@ -3,7 +3,6 @@ package HelloSpringMvc.controller;
 import HelloSpringMvc.bo.UserDetailInfoBo;
 import HelloSpringMvc.bo.UserInfoBo;
 import HelloSpringMvc.enums.CheckRegisterEnum;
-import HelloSpringMvc.model.UserDetailInfoModel;
 import HelloSpringMvc.service.CheckParam;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -25,7 +24,7 @@ public class UserAccountController {
         CheckParam checkParam = new CheckParam();
         ModelAndView mav = new ModelAndView();
         if (checkParam.checkLoginParam(userInfoBo.getUserName(),userInfoBo.getPassword()).getErrorCode()==0){
-            mav.setViewName("/html/basic/loginSuccess");
+            mav.setViewName("html/account/loginSuccess");
             mav.addObject("userName",userInfoBo.getUserName());
             mav.addObject("password",userInfoBo.getPassword());
             logger.info(userInfoBo.getUserName()+"登陆成功");
@@ -33,7 +32,7 @@ public class UserAccountController {
             return mav;
         }
         else{
-            mav.setViewName("/html/basic/loginFail");
+            mav.setViewName("html/account/loginFail");
             mav.addObject("userName",userInfoBo.getUserName());
             mav.addObject("password",userInfoBo.getPassword());
             mav.addObject("loginResult",checkParam.checkLoginParam(userInfoBo.getUserName(),userInfoBo.getPassword()).getErrorMsg());
@@ -46,7 +45,7 @@ public class UserAccountController {
 
     @RequestMapping(value="registerDetail")
     public ModelAndView registerDetail(){
-        ModelAndView mav = new ModelAndView("/html/basic/registerDetail");
+        ModelAndView mav = new ModelAndView("html/account/registerDetail");
         return mav;
     }
 
@@ -57,6 +56,14 @@ public class UserAccountController {
         CheckParam checkParam = new CheckParam();
         CheckRegisterEnum checkRegisterEnum = checkParam.registerUserDetailInfo(userDetail);
         mav.addObject("result",checkRegisterEnum.getErrorMsg());
+        return mav;
+    }
+
+    @RequestMapping(value="/html/basic/easy")
+    public ModelAndView easy(String name){
+        System.out.println(name);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("/html/basic/homepage");
         return mav;
     }
 }
